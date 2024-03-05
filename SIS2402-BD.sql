@@ -5,15 +5,28 @@ USE SIS2402;
 CREATE TABLE CLIENTES
 (
 	`ID_number` INT auto_increment,
-	`nome` VARCHAR(50) NOT NULL,
-    `email` VARCHAR(50) NOT NULL,
-    `nascimento` DATE NOT NULL,
-    `rua` VARCHAR(50) NOT NULL,
-    `numero` INT,
-    `bairro` VARCHAR(50) NOT NULL,
-    `cidade` 	VARCHAR(50) NOT NULL,
-    `uf` VARCHAR(2) NOT NULL,
-    `pais` VARCHAR(50) NOT NULL,
+	`NOME` MEDIUMTEXT NOT NULL,
+    `GENERO` VARCHAR(10) not null,
+    `EMAIL` VARCHAR(50) NOT NULL,
+    `NASCIMENTO` DATE NOT NULL,
+    `RUA` VARCHAR(50) NOT NULL,
+    `NUMERO` INT,
+    `BAIRRO` VARCHAR(50) NOT NULL,
+    `CIDADE` MEDIUMTEXT	NOT NULL,
+    `ESTADO` VARCHAR(2) NOT NULL,
+    `PAIS` VARCHAR(50) NOT NULL,
+    `CEP` INT,
     
     PRIMARY KEY (`ID_NUMBER`)
 );
+INSERT INTO `SIS2402` . `CLIENTES`
+(
+`NOME`, `GENERO`, `EMAIL`, `NASCIMENTO`, 
+`RUA`, `NUMERO`, `BAIRRO`, `CIDADE`, `ESTADO`, `PAIS`, `CEP`
+);
+VALUES 
+(`
+Vinicius fantin`, `Masculino`, `vinifantitn302@gmail.com`, `20030520`, 
+`Ernesto Paese`, `200`, `Universitario`, `videira`, `Santa Catarina`, `Brasil`, `89566254`
+);
+SELECT * FROM `sis2402` . `CLIENTES`
